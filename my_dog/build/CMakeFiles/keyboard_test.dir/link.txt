@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -framework CoreFoundation CMakeFiles/keyboard_test.dir/src/interface/KeyBoard.cpp.o CMakeFiles/keyboard_test.dir/src/test_keyboard.cpp.o -o keyboard_test  -pthread

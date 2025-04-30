@@ -1,8 +1,8 @@
 #ifndef MotorState_H
 #define MotorState_H
 
-#include "common/ares_mathTypes.h"
-#include "common/ares_mathTools.h"
+#include "common/mathTypes.h"
+#include "common/mathTools.h"
 #include "common/enumClass.h"
 #include "interface/CmdPanel.h"
 

@@ -21,6 +21,20 @@ void FSM::initialize(){
 
 void FSM::run(){
     _startTime = getSystemTime();
+    _ctrlComp->sendRecv();
+    _ctrlComp->runWaveGen();
     _currentState->run();
+    if(!checkSafty()){
+        _ctrlComp->ioInter->setPassive();
+    }
+    if(_mode==FSMMode::NORMAL){
+        _currentState->run();
+        _nextState = _currentState->checkChange();
+        if(_nextState!=_currentState){
+            _currentState->exit();
+            _currentState = _nextState;
+            _currentState->enter();
+        }
+    }
     _nextState = _currentState->checkChange();
 }

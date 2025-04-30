@@ -37,10 +37,11 @@ public:
     virtual void reaceiveHandle(SDK::state *lowstate);
     #endif
     protected:
+    // reading_thread: get input and change useCmd and userValue
     virtual void* run(void *arg){return NULL;}
     UserCommand userCmd;
     UserValue userValue;
 
-}
+};
 
 #endif

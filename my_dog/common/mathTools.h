@@ -1,9 +1,17 @@
 #ifndef ARES_MATHTOOLS_H
 #define ARES_MATHTOOLS_H
 
-#include <common/ares_mathTypes.h>
+#include <common/mathTypes.h>
 #include <stdio.h>
- 
+template<typename T1, typename T2>
+inline T1 max(const T1 a, const T2 b){
+	return (a > b ? a : b);
+}
+
+template<typename T1, typename T2>
+inline T1 min(const T1 a, const T2 b){
+	return (a < b ? a : b);
+} 
 template <typename T>
 inline T saturation(const T value, Vec2 limits){
     /*remind that left is smaller than other right one
@@ -40,3 +48,4 @@ inline RotMat quatToRotMat(const Quat& q) {
             1 - 2 * (e1 * e1 + e2 * e2);
     return R;
 }
+#endif

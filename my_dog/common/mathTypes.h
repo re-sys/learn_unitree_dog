@@ -1,7 +1,7 @@
 #ifndef MATHTYPES_H
 #define MATHTYPES_H
 
-#include <eigen3/Eigen/Dense>
+#include <Eigen/Dense>
 
 
 /************************/

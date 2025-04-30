@@ -4,8 +4,8 @@ This is just for lowlevel control data type
 #ifndef MotorCommand_H
 #define MotorCommand_H
 
-#include "common/ares_mathTypes.h"
-#include "common/ares_mathTools.h"
+#include "common/mathTypes.h"
+#include "common/mathTools.h"
 
 struct MotorCmd{
     unsigned int mode;
